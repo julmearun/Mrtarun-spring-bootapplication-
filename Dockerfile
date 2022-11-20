@@ -5,6 +5,6 @@ RUN mvn install
 
 FROM openjdk:8
 WORKDIR /app
-COPY --from=build /app/target/springboot-mongo-docker.jar /app/springboot-mongo-docker.jar
+COPY --from=build /app/target/springboot-tarun-docker.jar /app/springboot-tarun-docker.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","springboot-mongo-docker.jar"]
+ENTRYPOINT ["java","-jar","springboot-tarun-docker.jar"]
